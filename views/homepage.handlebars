@@ -1,0 +1,17 @@
+{{#each posts as |post|}}
+<div class="w-50 mx-auto my-3"> 
+    <div class="card card-click">
+        <div class="card-header" style="background-color:rgb(37, 29, 29); color:white">
+            <div>
+            <a href="/api/post/{{post.id}}"><h4>{{post.post_title}} by {{post.user.username}}<span class="float-end fs-5">{{post.date}}</span></h4></a>
+            </div>  
+        </div>
+        <div class="card-body">
+            <p class="post-id" style="display:none">{{post.id}}</p>
+            <p class="card-text">{{post.post_text}}</p>
+        </div>
+    </div>
+</div>
+{{/each}}
+
+{{!-- <script src ="./js/script.js"></script> --}}

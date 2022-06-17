@@ -1,0 +1,44 @@
+[
+    {
+        "post_title": "test post 1",
+        "post_text": "i hope this works",
+        "date": "30/03/2022",
+        "user_id": 1
+    },
+    {
+        "post_title": "test post 2",
+        "post_text": "i hope this works",
+        "date": "30/03/2022",
+        "user_id": 2
+    },
+    {
+        "post_title": "test post 3",
+        "post_text": "i hope this works",
+        "date": "20/03/2022",
+        "user_id": 3
+    },
+    {
+        "post_title": "test post 4",
+        "post_text": "i hope this works",
+        "date": "30/01/022",
+        "user_id": 2
+    },
+    {
+        "post_title": "test post 5",
+        "post_text": "i hope this works",
+        "date": "30/03/2022",
+        "user_id": 1
+    },
+    {
+        "post_title": "test post 6",
+        "post_text": "i hope this works",
+        "date": "29/03/2022",
+        "user_id": 3
+    },
+    {
+        "post_title": "test post 7",
+        "post_text": "i hope this works",
+        "date": "30/03/2022",
+        "user_id": 1
+    }
+]

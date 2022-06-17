@@ -1,0 +1,57 @@
+<div class="w-50 mx-auto my-3"> 
+    <div class="card">
+        <div class="card-header" style="background-color:rgb(37, 29, 29); color:white">
+            <div>
+            <h4>{{post.post_title}} by {{post.user.username}}<span class="float-end fs-5">{{post.date}}</span></h4>
+            </div>  
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{post.post_text}}</p>
+        </div>
+    </div>
+</div>
+{{#if logged_in}}
+<div class="mx-auto mt-5 w-50 p-5 border" id="commentform">
+    <form class="form comment-form" data-id="{{post.id}}">
+        <div class="form-group mb-5">
+            <label for="exampleInputPassword1">Comment</label>
+            <input type="text" class="form-control" id="comment-text" placeholder="Add Comment...">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{{else}}
+<div class="text-center">
+    <h4>Must be Logged in to Comment</a></h4>
+    <h5><a href='/login'>Login</a></h5>
+    <h5><a href='/signup'>Signup</a></h5>
+</div>
+{{/if}}
+{{#if post.comments.length}}
+    <div>
+        <h1 class="border-bottom ml-3">Comments</h1>
+    </div>
+    {{#each post.comments as |comment|}}
+    <div class="w-50 mx-auto my-3"> 
+    <div class="card">
+        <div class="card-header" style="background-color:rgb(37, 29, 29); color:white">
+            <div>
+            <h4>{{comment.user.username}}<span class="float-end fs-5">{{post.date}}</span></h4>
+            </div>  
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{comment.comment_text}}</p>
+        </div>
+    </div>
+</div>
+    {{!-- <div>
+        <p>{{comment.comment_text}}</p>
+        <p>{{comment.user.username}}</p>
+    </div> --}}
+    {{/each}}
+{{/if}}
+
+
+
+
+<script src="../../js/comment.js"></script>

@@ -1,0 +1,48 @@
+<div class="text-center my-3" >
+    <h1>{{user.username}}'s profile</h1>
+</div>
+<div class="text-center">
+    <button class="btn-primary" onclick="showForm()" id="postbtn">New Post</button>
+</div>
+<div class="mx-auto mt-5 w-50 p-5 border d-none" id="newpostform">
+    <form class="form post-form" data-id="{{user.id}}">
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">Post Title</label>
+            <input type="text" class="form-control" id="post-title" aria-describedby="emailHelp" placeholder="Title">
+        </div>
+        <div class="form-group mb-5">
+            <label for="exampleInputPassword1">Content</label>
+            <input type="text" class="form-control" id="post-text" placeholder="What would you like to say">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{{#each user.posts as |post|}}
+<div class="w-50 mx-auto my-3"> 
+    <div class="card">
+        <div class="card-header" style="background-color:rgb(37, 29, 29); color:white">
+            <div>
+            <h4><a href="/api/post/{{post.id}}">{{post.post_title}}</a><span class="float-end fs-5">{{post.date}}</span></h4>
+            </div>  
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{post.post_text}}<span class="float-end mx-2"><button class="btn btn-primary delbtn" data-id="{{post.id}}">delete</button></span><span class="float-end"><button class="btn btn-primary" id="updatebtn" onclick="showUpdate()">update</button></span></p>
+        </div>
+    </div>
+    <div class="mx-auto mt-5 w-50 p-5 border d-none" id="updatepostform">
+    <form class="form update-form" data-id="{{post.id}}">
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">Post Title</label>
+            <input type="text" class="form-control" id="update-title" aria-describedby="emailHelp" placeholder="{{post.post_title}}">
+        </div>
+        <div class="form-group mb-5">
+            <label for="exampleInputPassword1">Content</label>
+            <input type="text" class="form-control" id="update-text" placeholder="{{post.post_text}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+{{/each}}
+
+<script src="../js/profilePost.js"></script>
