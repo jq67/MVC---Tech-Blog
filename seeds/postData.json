@@ -1,44 +1,37 @@
 [
     {
-        "post_title": "test post 1",
-        "post_text": "i hope this works",
-        "date": "30/03/2022",
+        "post_title": "Tech Blog is great!",
+        "post_text": "I love this place",
         "user_id": 1
     },
     {
-        "post_title": "test post 2",
-        "post_text": "i hope this works",
-        "date": "30/03/2022",
+        "post_title": "Julian is so smart",
+        "post_text": "I know right?",
         "user_id": 2
     },
     {
-        "post_title": "test post 3",
-        "post_text": "i hope this works",
-        "date": "20/03/2022",
+        "post_title": "Heres some words",
+        "post_text": "and some more words",
         "user_id": 3
     },
     {
-        "post_title": "test post 4",
-        "post_text": "i hope this works",
-        "date": "30/01/022",
+        "post_title": "Why did the chicken cross the road?",
+        "post_text": "to get to the other side",
         "user_id": 2
     },
     {
-        "post_title": "test post 5",
-        "post_text": "i hope this works",
-        "date": "30/03/2022",
+        "post_title": "Comments",
+        "post_text": "Comments",
         "user_id": 1
     },
     {
-        "post_title": "test post 6",
-        "post_text": "i hope this works",
-        "date": "29/03/2022",
+        "post_title": "Breaking Bad",
+        "post_text": "Better call saul",
         "user_id": 3
     },
     {
-        "post_title": "test post 7",
-        "post_text": "i hope this works",
-        "date": "30/03/2022",
+        "post_title": "None of these posts are tech related",
+        "post_text": "whoops",
         "user_id": 1
     }
 ]

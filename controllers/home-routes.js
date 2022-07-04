@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 
-// get route render posts if logged in
+// renders all posts on homepage
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -22,28 +23,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// clicking on a post checks if logged in then brings to post page
-// might need withauth iddleware
-// router.get('/user/:id', async (req, res) => {
-//   try {
-//       const profileData = await User.findByPk(req.params.id, {
-//           include: [
-//               {
-//                   model: Post,
-//               }
-//           ],
-//       })
-  
-//       const profile = profileData.get({plain: true})
-  
-//       res.render('profile', { profile, logged_in: req.session.logged_in, user_id: req.session.user_id })
-//   // res.status(200).json(profile)
-//   } catch (err) {
-//       res.status(500).json(err)
-//   }
-// })
-
-router.get('/profile', async (req, res) => {
+// route to get users profile page
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -64,8 +45,7 @@ router.get('/profile', async (req, res) => {
 });
 
 
-
-// login button
+// login link
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -74,7 +54,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 })
 
-
+// signup link
 router.get('/signup', async (req,res) => {
   try {
   res.render('signup', { logged_in: false });
