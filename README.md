@@ -6,7 +6,7 @@
 
 This is a full stack website that allows users to share and comment on posts.
 
-
+https://mvc---tech-blog.herokuapp.com/
 
 
 
@@ -40,6 +40,8 @@ npm run start to start the server.
 ```
 
 ## Usage
+
+https://mvc---tech-blog.herokuapp.com/
 
 ![project screenshot](./example.png)
 
