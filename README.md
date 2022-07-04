@@ -32,7 +32,11 @@ This project follows the model view controller architecture. The models are hand
 ### Installation Instructions
 
 ```md
-mysql -u root -p, (login with your information) and then use source ./db/schema.sql; in the root to setup the database. npm run seed to seed the database with basic info and then npm run start to start the server.
+mysql -u root -p, (login with your information)
+source ./db/schema.sql; in the root to setup the database.
+create a .env file with your info
+npm run seed to seed the database with basic info
+npm run start to start the server.
 ```
 
 ## Usage
